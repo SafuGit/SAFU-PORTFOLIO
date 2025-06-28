@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaAngular, FaHtml5, FaPython, FaReact } from 'react-icons/fa';
 import { FaFlutter } from 'react-icons/fa6';
+import { useInView } from 'react-intersection-observer';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
 const AboutMe = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  })
+
+  useEffect(() => {
+    if (inView) {
+      window.history.replaceState(null, '', '#aboutMe');
+    }
+  }, [inView])
+
   return (
-    <div className='w-[95vw] mx-auto mt-30 rounded-2xl' id='aboutMe' style={{
+    <div className='w-[95vw] mx-auto mt-30 rounded-2xl' id='aboutMe' ref={ref} style={{
       backgroundImage: 'url("/assets/treebg-2.jpg")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

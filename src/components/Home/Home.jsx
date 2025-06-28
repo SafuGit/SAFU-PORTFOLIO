@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BiDownload } from 'react-icons/bi';
 import { BsDiscord, BsEye, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { LiaLinkedin } from 'react-icons/lia';
+import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
+  const {ref, inView} = useInView({
+    threshold: 0.5,
+  })
+
+  useEffect(() => {
+    if (inView) {
+      window.history.replaceState(null, '', '#home');
+    }
+  }, [inView])
+
   return (
-    <div className='w-[95vw] mx-auto!' id='home'>
+    <div className='w-[95vw] mx-auto!' id='home' ref={ref}>
       <div className='flex lg:flex-row flex-col-reverse items-center lg:items-start gap-4'>
         <div className='flex flex-col bg p-6! rounded-2xl lg:w-[60%] w-[90%]'>
           <div>

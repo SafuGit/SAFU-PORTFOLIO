@@ -11,11 +11,9 @@ const Navbar = () => {
       setActiveHash(window.location.hash || "#home");
     }
 
-    window.addEventListener("hashchange", onHashChange);
-    return () => {
-      window.removeEventListener("hashchange", onHashChange);
-    }
-  }, [])
+    const interval = setInterval(onHashChange, 200);
+    return () => clearInterval(interval);
+  });
 
   return (
     <div className="flex justify-center">
