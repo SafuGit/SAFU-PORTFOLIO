@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BiPhone } from 'react-icons/bi';
 import { BsArrowRight } from 'react-icons/bs';
 import { MdEmail, MdMail } from 'react-icons/md';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const {ref, inView} = useInView({
+    threshold: 0.5,
+  })
+
+  useEffect(() => {
+    if (inView) {
+      window.history.replaceState(null, '', '#contact');
+    }
+  }, [inView])
   return (
-    <div id='contact' className='w-[95vw] mx-auto mb-40'>
+    <div id='contact' className='w-[95vw] mx-auto' ref={ref}>
       <h1 className='text-5xl font-medium mb-6'>Contact Me</h1>
       <div className='flex justify-between'>
         <div className='bg rounded-2xl p-8 w-[70%]'>

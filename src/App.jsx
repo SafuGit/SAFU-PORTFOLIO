@@ -23,7 +23,9 @@ function App() {
       <Skills></Skills>
       <Hobbies></Hobbies>
       <Projects></Projects>
-      <Contact></Contact>
+      <div className='pb-20'>
+        <Contact></Contact>
+      </div>
     </div>
   )
 }
