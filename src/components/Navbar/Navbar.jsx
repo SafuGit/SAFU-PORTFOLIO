@@ -19,14 +19,14 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="flex bg rounded-full justify-center gap-4 navbar w-fit p-2! text-white border border-y-gray-950">
+      <div className="flex bg rounded-full justify-center gap-4 navbar w-fit p-2 text-white border border-y-gray-950">
         <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#home" ? " bg-green-950" : "")}>
           <BiHome className="text-xl"></BiHome>
           <a href="#home">Home</a>
         </div>
-        <div className="rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer">
+        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#aboutMe" ? " bg-green-950" : "")}>
           <CgProfile className="text-xl"></CgProfile>
-          <a href="">About Me</a>
+          <a href="#aboutMe">About Me</a>
         </div>
         <div className="rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer">
           <CgCode className="text-2xl"></CgCode>
