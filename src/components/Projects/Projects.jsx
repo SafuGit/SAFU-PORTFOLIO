@@ -15,7 +15,7 @@ const Projects = () => {
   }, [inView])
 
   return (
-    <div className='w-[95vw] mx-auto' id='projects' ref={ref}>
+    <div className='w-[95vw] mx-auto mb-40' id='projects' ref={ref}>
       <h1 className='text-center text-5xl font-semibold mb-8'>Featured Projects</h1>
       <div className='flex flex-col justify-center gap-20'>
         <div className='flex justify-center'>
