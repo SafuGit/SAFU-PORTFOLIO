@@ -6,7 +6,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 const AboutMe = () => {
   return (
-    <div className='w-[95vw] mx-auto mt-50 rounded-2xl' id='aboutMe' style={{
+    <div className='w-[95vw] mx-auto mt-30 rounded-2xl' id='aboutMe' style={{
       backgroundImage: 'url("/assets/treebg-2.jpg")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

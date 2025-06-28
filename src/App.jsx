@@ -1,3 +1,4 @@
+import { BiDownArrow } from 'react-icons/bi'
 import './App.css'
 import AboutMe from './components/AboutMe/AboutMe'
 import Home from './components/Home/Home'
@@ -11,6 +12,9 @@ function App() {
         <Navbar></Navbar>
       </div>
       <Home></Home>
+      <div className='mt-15 flex justify-center items-center'>
+        <a href='#aboutMe' className='btn bg-green-950 animate-bounce btn-circle'><BiDownArrow></BiDownArrow></a>
+      </div>
       <AboutMe></AboutMe>
     </div>
   )
