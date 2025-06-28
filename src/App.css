@@ -99,3 +99,7 @@
   box-shadow: 0 6px 30px rgba(0, 255, 100, 0.6); 
   cursor: pointer;
 }
+
+html {
+  scroll-behavior: smooth;
+}
