@@ -5,7 +5,7 @@ import { LiaLinkedin } from 'react-icons/lia';
 
 const Home = () => {
   return (
-    <div className='w-[95vw] mx-auto!'>
+    <div className='w-[95vw] mx-auto!' id='home'>
       <div className='flex lg:flex-row flex-col-reverse items-center lg:items-start gap-4'>
         <div className='flex flex-col bg p-6! rounded-2xl lg:w-[60%] w-[90%]'>
           <div>
