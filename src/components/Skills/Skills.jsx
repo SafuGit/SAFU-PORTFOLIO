@@ -6,6 +6,7 @@ import { FaAngular, FaReact } from 'react-icons/fa';
 import { SiDaisyui, SiDjango, SiFlask, SiTailwindcss, SiVite } from 'react-icons/si';
 import { FaFlask, FaFlutter } from 'react-icons/fa6';
 import { BsBootstrap } from 'react-icons/bs';
+import { Link } from 'react-router';
 
 
 const Skills = () => {
@@ -24,7 +25,10 @@ const Skills = () => {
   const secondRow = skills.slice(middle);
   return (
     <div className='w-[95vw] mx-auto' id='skills' ref={ref}>
-      <h1 className='text-5xl mb-16 font-semibold'>My Skills</h1>
+      <div className='flex justify-between'>
+        <h1 className='text-5xl mb-16 font-semibold'>My Skills</h1>
+        <Link to='/skillDetails' className='btn btn-primary btn-outline mb-8'>See All Skills</Link>
+      </div>
       <Marquee speed={30}>
         {firstRow.map((skill, index) => (
           <div key={index} className='flex flex-col items-center justify-center mx-4 w-35 shadow-xl hover:animate-pulse hover:cursor-pointer bg p-8 rounded-2xl bg-green-950'>
