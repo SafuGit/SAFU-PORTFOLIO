@@ -39,8 +39,8 @@ const Home = () => {
         <div className='flex flex-col bg p-6! rounded-2xl lg:w-[60%] w-[90%]'>
           <div>
             <h1 className='text-5xl font-medium'>Hello, I am Safwan Sadid.</h1>
-            <p className='text-xl text-gray-300 mb-2!'>A young <strong> <Typewriter words={words} loop={true}></Typewriter> </strong> who started coding in Covid.</p>
-            <p className='text-sm font-light text-gray-400'>I am a self-motivated individual who began coding during the pandemic in 2020, Initially, it was just a hobby but later on it became a love for problem-solving. In these years, I have worked on many projects.</p>
+            <p className='text-xl text-gray-300 mb-2!'>A young <strong> <Typewriter words={words} loop={true}></Typewriter>. </strong></p>
+            <p className='text-sm font-light text-gray-400'>I am a self-motivated individual who began exploring coding since the pandemic in 2020, Initially, it was just a hobby but later on it became a love for problem-solving. In these years, I have worked on many projects.</p>
           </div>
           <div className='mb-8'></div>
           <div className='flex flex-col'>
