@@ -33,7 +33,7 @@ const Skills = () => {
           </div>
         ))}
       </Marquee>
-      <Marquee direction='right' speed={30} className='mb-8'>
+      <Marquee direction='right' speed={30}>
         {secondRow.map((skill, index) => (
           <div key={index} className='flex flex-col items-center justify-center mx-4 w-35 mt-8 shadow-xl hover:animate-pulse hover:cursor-pointer bg p-8 rounded-2xl bg-green-950'>
             <img src={skill.img} alt="" />

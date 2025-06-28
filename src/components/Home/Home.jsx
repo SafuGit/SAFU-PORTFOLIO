@@ -27,7 +27,7 @@ const Home = () => {
           <div className='mb-8'></div>
           <div className='flex flex-col'>
             <div className='flex gap-2'>
-              <button className='glass-button flex gap-2 items-center p-3 rounded-lg w-[22%] justify-center'>Resume <BiDownload></BiDownload></button>
+              <a download={true} href='/assets/Safwan_Sadid_Resume.pdf' className='glass-button flex gap-2 items-center p-3 rounded-lg w-[22%] justify-center'>Resume <BiDownload></BiDownload></a>
             </div>
             <div className='flex gap-4 mt-8 items-center'>
               <a href="https://www.linkedin.com/in/safwan-sadid-1b1978358/" className='text-2xl'><BsLinkedin></BsLinkedin></a>
