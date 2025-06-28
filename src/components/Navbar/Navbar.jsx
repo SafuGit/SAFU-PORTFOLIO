@@ -50,9 +50,9 @@ const Navbar = () => {
           <CgCode className="text-2xl"></CgCode>
           <a href="#skills">Skills</a>
         </div>
-        <div className="rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer">
+        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#hobbies" ? " bg-green-950" : "")}>
           <BiLike className="text-xl"></BiLike>
-          <a href="">Hobbies</a>
+          <a href="#hobbies">Hobbies</a>
         </div>
         <div className="rounded-full p-2! flex gap-1 items-center hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer">
           <PiPhone className="text-xl"></PiPhone>

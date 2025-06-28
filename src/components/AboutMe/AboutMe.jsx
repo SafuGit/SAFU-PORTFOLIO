@@ -19,7 +19,7 @@ const AboutMe = () => {
   }, [inView])
 
   return (
-    <div className='w-[95vw] mx-auto mt-30 mb-30 rounded-2xl' id='aboutMe' ref={ref} style={{
+    <div className='w-[95vw] mx-auto mt-30 mb-40 rounded-2xl' id='aboutMe' ref={ref} style={{
       backgroundImage: 'url("/assets/treebg-2.jpg")',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

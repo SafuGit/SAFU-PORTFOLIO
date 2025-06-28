@@ -103,3 +103,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+.arch-bg {
+  /* From https://css.glass */
+  background: rgba(74, 64, 187, 0.23);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(3.8px);
+  border: 1px solid rgba(74, 64, 187, 0.78);
+}
