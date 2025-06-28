@@ -26,7 +26,7 @@ const Navbar = () => {
           <CgProfile className="text-xl"></CgProfile>
           <a href="#aboutMe">About Me</a>
         </div>
-        <div className="rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer">
+        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#skills" ? " bg-green-950" : "")}>
           <CgCode className="text-2xl"></CgCode>
           <a href="">Skills</a>
         </div>

@@ -3,6 +3,7 @@ import './App.css'
 import AboutMe from './components/AboutMe/AboutMe'
 import Home from './components/Home/Home'
 import Navbar from './components/Navbar/Navbar'
+import Skills from './components/Skills/Skills'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <a href='#aboutMe' className='btn bg-green-950 animate-bounce btn-circle'><BiDownArrow></BiDownArrow></a>
       </div>
       <AboutMe></AboutMe>
+      <Skills></Skills>
     </div>
   )
 }
