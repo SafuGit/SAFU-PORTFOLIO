@@ -13,8 +13,8 @@ function App() {
 
   return (
     <div className='App font-poppins'>
-      <Fade duration={2000} triggerOnce>
-        <div className='pt-3! mb-10! sticky z-50 top-0'>
+      <Fade duration={2000} triggerOnce className='pt-3! mb-10! sticky z-50 top-0'>
+        <div>
           <Navbar></Navbar>
         </div>
       </Fade>
