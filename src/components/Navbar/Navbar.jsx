@@ -16,7 +16,7 @@ const Navbar = () => {
       setActiveHash(window.location.hash || "#home");
     }
 
-    const interval = setInterval(onHashChange, 200);
+    const interval = setInterval(onHashChange, 100);
     return () => clearInterval(interval);
   });
 
@@ -33,7 +33,7 @@ const Navbar = () => {
       navbar.classList.remove('scale-y-0');
       navbar.classList.add('scale-y-100');
     }
-  },)
+  }, [media]);
 
   return (
     <div className="flex flex-col md:flex-row md:justify-center justify-start ml-10 md:ml-0">
@@ -61,7 +61,7 @@ const Navbar = () => {
         </div>
         <div className={"rounded-full p-2! flex gap-1 items-center hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#contact" ? " bg-green-950" : "")}>
           <PiPhone className="text-xl"></PiPhone>
-          <a href="#projects">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>

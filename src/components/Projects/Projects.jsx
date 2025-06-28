@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
   const {ref, inView} = useInView({
-    threshold: 0.5,
+    threshold: 0.2,
   })
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const Projects = () => {
             <img className='rounded-l-2xl h-full' src="/assets/jobBazar.png" alt="" />
           </div>
           <div className='w-[35%] bg rounded-r-2xl p-6'>
-            <h1 className='text-3xl font-medium'>JobBazar BD</h1>
+            <h1 className='text-3xl font-medium'>JobBazarBD</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>
               A Job Marketplace app to hire employees and get jobs. With features including CV upload, job posting, and user authentication.
