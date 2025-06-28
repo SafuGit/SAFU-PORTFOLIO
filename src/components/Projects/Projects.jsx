@@ -18,11 +18,11 @@ const Projects = () => {
     <div className='w-[95vw] mx-auto mb-40' id='projects' ref={ref}>
       <h1 className='text-center text-5xl font-semibold mb-8'>Featured Projects</h1>
       <div className='flex flex-col justify-center gap-20'>
-        <div className='flex justify-center'>
-          <div className='w-[60%]'>
+        <div className='flex lg:flex-row flex-col justify-center'>
+          <div className='lg:lg:w-[60%]'>
             <img className='rounded-l-2xl h-full' src="/assets/marathonOps.png" alt="" />
           </div>
-          <div className='w-[35%] bg rounded-r-2xl p-6'>
+          <div className='lg:lg:w-[35%] bg rounded-r-2xl p-6'>
             <h1 className='text-3xl font-medium'>MarathonOps</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>A Marathon Event Management app with many features such as Adding Marathons, Applying for Marathons etc.</p>
@@ -48,11 +48,11 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-row-reverse justify-center'>
-          <div className='w-[60%]'>
+        <div className='flex lg:flex-row-reverse flex-col justify-center'>
+          <div className='lg:w-[60%]'>
             <img src="https://i.ibb.co/2722sT6M/Screenshot-2025-06-28-183402.png" alt="Screenshot-2025-06-28-183402" border="0" className='rounded-r-2xl h-full' />
           </div>
-          <div className='w-[35%] bg rounded-l-2xl p-6'>
+          <div className='lg:w-[35%] bg rounded-l-2xl p-6'>
             <h1 className='text-3xl font-medium'>GardenHub</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>
@@ -78,11 +78,11 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className='flex justify-center'>
-          <div className='w-[60%]'>
+        <div className='flex lg:flex-row flex-col justify-center'>
+          <div className='lg:w-[60%]'>
             <img className='rounded-l-2xl h-full' src="/assets/jobBazar.png" alt="" />
           </div>
-          <div className='w-[35%] bg rounded-r-2xl p-6'>
+          <div className='lg:w-[35%] bg rounded-r-2xl p-6'>
             <h1 className='text-3xl font-medium'>JobBazarBD</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>
