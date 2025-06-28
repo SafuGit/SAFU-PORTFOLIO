@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
+@plugin 'daisyui' {
+  themes: [
+    "greenfolio",
+  ]
+}
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+@plugin "daisyui/theme" {
+  name: "greenfolio";
+  default: false;
+  prefersdark: true;
+  color-scheme: "dark";
+
+  --color-base-100: oklch(20% 0.01 140);       /* Very dark greenish-black */
+  --color-base-200: oklch(30% 0.02 140);       /* Slightly lighter for cards */
+  --color-base-300: oklch(40% 0.025 140);      /* Borders/backgrounds */
+
+  --color-base-content: oklch(92% 0.02 140);   /* Light greenish-white text */
+
+  --color-primary: oklch(50% 0.28 135);        /* Earthy soft green */
+  --color-primary-content: oklch(98% 0.01 130);/* Light text on primary */
+
+  --color-secondary: oklch(60% 0.18 140);      /* Bright nature-green */
+  --color-secondary-content: oklch(10% 0.01 140);
+
+  --color-accent: oklch(55% 0.3 200);          /* Cool minty accent */
+  --color-accent-content: oklch(10% 0.01 200);
+
+  --color-neutral: oklch(25% 0.015 120);       /* Neutral greenish-dark */
+  --color-neutral-content: oklch(90% 0.02 140);
+
+  --color-info: oklch(70% 0.15 180);           /* Teal-green info */
+  --color-info-content: oklch(10% 0 0);
+
+  --color-success: oklch(55% 0.25 130);        /* Brighter success green */
+  --color-success-content: oklch(15% 0.01 130);
+
+  --color-warning: oklch(65% 0.25 90);         /* Yellowish leaf-tone */
+  --color-warning-content: oklch(15% 0.01 90);
+
+  --color-error: oklch(45% 0.25 30);           /* Deep rust/red error */
+  --color-error-content: oklch(95% 0.02 30);
+
+  --radius-selector: 0.25rem;
+  --radius-field: 0.75rem;
+  --radius-box: 0.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 1;
+  --noise: 0.5;
+}
+
+
+.App {
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(76, 175, 80, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 70% 20%, rgba(139, 195, 74, 0.08) 0%, transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(0, 255, 100, 0.05) 0%, transparent 20%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85));
+}
+
+.NavbarStyle {
+  /* From https://css.glass */
+  background: rgba(22, 29, 20, 0.35);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(22, 29, 20, 0.99);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
