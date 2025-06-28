@@ -8,6 +8,7 @@ import { useMediaQuery } from 'usehooks-ts';
 
 const AboutMe = () => {
   const media = useMediaQuery('(min-width: 640px)');
+  // const maxMedia = useMediaQuery('(max-width: 362px)')
   const { ref, inView } = useInView({
     threshold: 0.5,
   })
@@ -32,12 +33,12 @@ const AboutMe = () => {
               I am a self-motivated individual who began coding during the pandemic in 2020, Initially, it was just a hobby but later on it became a love for problem-solving. Throughout the years, I have worked on many projects. {media ? 'I’m always ready to learn more, work with other people, and tackle new obstacles that help me improve as a developer. At the moment, I am looking for places where I can use the knowledge I have, learn more about the industry, and to create useful products.' : ''}
             </p>
           </div>
-          <h1 className='text-2xl font-semibold mt-8 hidden lg:block'>Why i love Coding</h1>
-          <div className='bg-green-950 rounded-2xl lg:w-[60%] w-full hidden lg:block mt-4 bg p-4'> 
-            <p>I have always been Interested in how things like The Computer, Mobile Phone & TV Worked. From a young age i Thought "How do these things function?", "Where am i getting this from?". I watched youtube videos and other resources and learnt some fundamentals. I find coding as a way to release my creativity, To bring my ideas to life & make useful products for people.</p>
+          <h1 className='text-2xl font-semibold mt-8 max-[362px]:hidden'>Why i love Coding</h1>
+          <div className='bg-green-950 rounded-2xl lg:w-[60%] w-full mt-4 bg p-4 max-[362px]:hidden'> 
+            <p>I have always been Interested in how things like The Computer, Mobile Phone & TV Worked. From a young age i Thought "How do these things function?", "Where am i getting this from?".{ media ? "I watched youtube videos and other resources and learnt some fundamentals. I find coding as a way to release my creativity, To bring my ideas to life & make useful products for people." : ""}</p>
           </div>
         </div>
-        <div>
+        <div className='hidden sm:block'>
           <VerticalTimeline layout='1-column-right'>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
