@@ -105,8 +105,8 @@ const Projects = () => {
               <img src="https://img.shields.io/badge/MySQL-darkblue?style=for-the-badge&logo=mysql" alt="Badge"></img>
             </div>
             <div className='flex gap-2'>
-              <a href='https://marathon-ops.web.app' className='btn bg text-lg'>Live Link <BiLink></BiLink></a>
-              <a href='https://github.com/safugit/MarathonOps' className='btn text-lg btn-info'>Github <FaGithub></FaGithub></a>
+              <a href='' className='btn bg text-lg'>Live Link <BiLink></BiLink></a>
+              <a href='https://github.com/safugit/jobBazar' className='btn text-lg btn-info'>Github <FaGithub></FaGithub></a>
             </div>
           </div>
         </div>
