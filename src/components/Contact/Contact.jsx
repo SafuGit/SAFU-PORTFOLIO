@@ -30,7 +30,7 @@ const Contact = () => {
             <p>safwansadid.ah@gmail.com</p>
           </div>
         </div>
-        <div className='bg rounded-2xl p-8 sm:w-[25%] hover:cursor-pointer' onClick={() => {
+        <div className='bg rounded-2xl p-8 sm:w-[25%] hover:animate-pop hover:cursor-pointer' onClick={() => {
           window.location.href = 'mailto:safwansadid.ah@gmail.com'
         }}>
           <div className='flex justify-between'>

@@ -41,27 +41,27 @@ const Navbar = () => {
       <div className="md:flex md:flex-row grid min-[463px]:grid-cols-3 grid-cols-2 bg md:rounded-full rounded-xl justify-center gap-4 navbar w-fit p-2 text-white border border-y-gray-950 transform scale-y-0 transition-transform duration-500 ease-in-out absolute top-15 md:static">
         <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#home" ? " bg-green-950" : "")}>
           <BiHome className="text-xl"></BiHome>
-          <a href="#home">Home</a>
+          <a href="/#home">Home</a>
         </div>
         <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#aboutMe" ? " bg-green-950" : "")}>
           <CgProfile className="text-xl"></CgProfile>
-          <a href="#aboutMe">About Me</a>
+          <a href="/#aboutMe">About Me</a>
         </div>
         <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#skills" ? " bg-green-950" : "")}>
           <CgCode className="text-2xl"></CgCode>
-          <a href="#skills">Skills</a>
+          <a href="/#skills">Skills</a>
         </div>
         <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#hobbies" ? " bg-green-950" : "")}>
           <BiLike className="text-xl"></BiLike>
-          <a href="#hobbies">Hobbies</a>
+          <a href="/#hobbies">Hobbies</a>
         </div>
         <div className={"rounded-full p-2! flex gap-1 items-center hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#projects" ? " bg-green-950" : "")}>
           <GoProject className="text-xl"></GoProject>
-          <a href="#projects">Projects</a>
+          <a href="/#projects">Projects</a>
         </div>
         <div className={"rounded-full p-2! flex gap-1 items-center hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#contact" ? " bg-green-950" : "")}>
           <PiPhone className="text-xl"></PiPhone>
-          <a href="#contact">Contact</a>
+          <a href="/#contact">Contact</a>
         </div>
       </div>
     </div>
