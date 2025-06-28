@@ -25,7 +25,7 @@ const Hobbies = () => {
   ]
 
   return (
-    <div className='w-[95vw] mx-auto mt-40' ref={ref} id='hobbies'>
+    <div className='w-[95vw] mx-auto mt-40 mb-40' ref={ref} id='hobbies'>
       <h1 className='text-5xl mb-8 font-semibold'>My Hobbies</h1>
       <div className="mockup-code w-full">
         <pre data-prefix="$"><code><Typewriter words={words} loop={true}></Typewriter></code></pre>
