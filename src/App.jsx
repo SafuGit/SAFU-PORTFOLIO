@@ -8,6 +8,7 @@ import Hobbies from './components/Hobbies/Hobbies'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import { Fade } from 'react-awesome-reveal'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -39,10 +40,13 @@ function App() {
         <Projects></Projects>
       </Fade>
       <Fade duration={2000} triggerOnce>
-        <div className='pb-20'>
+        <div className='pb-10'>
           <Contact></Contact>
         </div>
       </Fade>
+      <div className='pb-10'>
+        <Footer></Footer>
+      </div>
     </div>
   )
 }
