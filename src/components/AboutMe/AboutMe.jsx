@@ -26,7 +26,7 @@ const AboutMe = () => {
       backgroundSize: 'cover',
     }}>
       <div className='flex sm:flex-row flex-col-reverse justify-between'>
-        <div className='flex flex-col p-10 h-screen text-white'>
+        <div className='flex flex-col p-10 h-fit text-white'>
           <h1 className='text-6xl font-semibold'>About Me</h1>
           <div className='bg-green-950 rounded-2xl lg:w-[50%] w-full mt-4 bg p-4'>
             <p className='font-medium text-green-100'>
