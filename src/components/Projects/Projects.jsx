@@ -73,7 +73,7 @@ const Projects = () => {
               <img src="https://img.shields.io/badge/Node.js-627a1a?style=for-the-badge&logo=nodedotjs" alt="Badge"></img>
             </div>
             <div className='flex gap-2'>
-              <a href='https://safu-a9.web.app' className='btn bg text-lg'>Live Link <BiLink></BiLink></a>
+              <a href='https://safu-a10.web.app' className='btn bg text-lg'>Live Link <BiLink></BiLink></a>
               <a href='https://github.com/safugit/GardenHub' className='btn text-lg btn-info'>Github <FaGithub></FaGithub></a>
             </div>
           </div>
@@ -105,7 +105,7 @@ const Projects = () => {
               <img src="https://img.shields.io/badge/MySQL-darkblue?style=for-the-badge&logo=mysql" alt="Badge"></img>
             </div>
             <div className='flex gap-2'>
-              <a href='' className='btn bg text-lg'>Live Link <BiLink></BiLink></a>
+              <a href='' className='btn bg-gray-300 px-4 py-2 cursor-not-allowed opacity-50 text-black text-lg'>Live Link <BiLink></BiLink></a>
               <a href='https://github.com/safugit/jobBazar' className='btn text-lg btn-info'>Github <FaGithub></FaGithub></a>
             </div>
           </div>
