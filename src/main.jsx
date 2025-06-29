@@ -4,12 +4,13 @@ import App from './App.jsx'
 import './index.css';
 import { createBrowserRouter, Link, RouterProvider } from 'react-router';
 import SkillDetails from './pages/SkillDetails/SkillDetails.jsx';
+import { Fade } from 'react-awesome-reveal';
 
 const routes = createBrowserRouter([
   {path: '/', Component: App},
   {
     path: '/skillDetails',
-    Component: SkillDetails, 
+    element: <Fade> <SkillDetails duration={2000}></SkillDetails> </Fade>, 
   },
   {path: '*', Component: () => <div className='text-3xl text-center mt-20'>
       <h1 className='mb-4'>404 Not Found</h1>

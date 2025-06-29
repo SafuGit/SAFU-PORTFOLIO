@@ -20,9 +20,9 @@ const Projects = () => {
       <div className='flex flex-col justify-center gap-20'>
         <div className='flex lg:flex-row flex-col justify-center'>
           <div className='lg:lg:w-[60%]'>
-            <img className='rounded-l-2xl h-full' src="/assets/marathonOps.png" alt="" />
+            <img className='lg:rounded-l-2xl rounded-t-2xl h-full' src="/assets/marathonOps.png" alt="" />
           </div>
-          <div className='lg:lg:w-[35%] bg rounded-r-2xl p-6'>
+          <div className='lg:lg:w-[35%] bg lg:rounded-r-2xl rounded-b-2xl p-6'>
             <h1 className='text-3xl font-medium'>MarathonOps</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>A Marathon Event Management app with many features such as Adding Marathons, Applying for Marathons etc.</p>
@@ -50,9 +50,9 @@ const Projects = () => {
         </div>
         <div className='flex lg:flex-row-reverse flex-col justify-center'>
           <div className='lg:w-[60%]'>
-            <img src="https://i.ibb.co/2722sT6M/Screenshot-2025-06-28-183402.png" alt="Screenshot-2025-06-28-183402" border="0" className='rounded-r-2xl h-full' />
+            <img src="https://i.ibb.co/2722sT6M/Screenshot-2025-06-28-183402.png" alt="Screenshot-2025-06-28-183402" border="0" className='lg:rounded-t-2xl h-full' />
           </div>
-          <div className='lg:w-[35%] bg rounded-l-2xl p-6'>
+          <div className='lg:w-[35%] bg lg:rounded-b-2xl p-6'>
             <h1 className='text-3xl font-medium'>GardenHub</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>
@@ -80,9 +80,9 @@ const Projects = () => {
         </div>
         <div className='flex lg:flex-row flex-col justify-center'>
           <div className='lg:w-[60%]'>
-            <img className='rounded-l-2xl h-full' src="/assets/jobBazar.png" alt="" />
+            <img className='lg:rounded-l-2xl rounded-t-2xl h-full' src="/assets/jobBazar.png" alt="" />
           </div>
-          <div className='lg:w-[35%] bg rounded-r-2xl p-6'>
+          <div className='lg:w-[35%] bg lg:rounded-r-2xl rounded-b-2xl p-6'>
             <h1 className='text-3xl font-medium'>JobBazarBD</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>
