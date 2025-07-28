@@ -55,7 +55,7 @@ const Home = () => {
           </div>
         </div>
         <div className='flex justify-center'>
-          <img src="/assets/proffesional_image.jpg" alt="" className='lg:w-120 w-[90%] rounded-2xl' />
+          <img src="/assets/proffessional_image.jpg" alt="" className='lg:w-120 w-[90%] rounded-2xl' />
         </div>
       </div>
     </div>
