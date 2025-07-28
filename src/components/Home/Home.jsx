@@ -45,10 +45,10 @@ const Home = () => {
           <div className='mb-8'></div>
           <div className='flex flex-col'>
             <div className='flex gap-2'>
-              <a download={true} href='/assets/Safwan_Sadid_Resume.pdf' className='glass-button flex gap-2 items-center p-3 rounded-lg sm:w-[22%] w-[50%] justify-center'>Resume <BiDownload></BiDownload></a>
+              <a download={true} href='/assets/Safwan_Web_Resume.pdf' className='glass-button flex gap-2 items-center p-3 rounded-lg sm:w-[22%] w-[50%] justify-center'>Resume <BiDownload></BiDownload></a>
             </div>
             <div className='flex gap-4 mt-8 items-center'>
-              <a href="https://www.linkedin.com/in/safwan-sadid-1b1978358/" className='text-2xl'><BsLinkedin></BsLinkedin></a>
+              {/* <a href="https://www.linkedin.com/in/safwan-sadid-1b1978358/" className='text-2xl'><BsLinkedin></BsLinkedin></a> */}
               <a href="https://github.com/SafuGit" className='text-2xl'><BsGithub></BsGithub></a>
               <a href="http://discord.com/users/871313769723228160" className='text-2xl'><BsDiscord></BsDiscord></a>
             </div>
