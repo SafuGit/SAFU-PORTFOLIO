@@ -61,7 +61,7 @@ const Hobbies = () => {
             <h1 className='text-3xl font-medium'>Development</h1>
             <div className='divider divider-vertical mt-0 mb-1'></div>
             <p className='text-gray-400'>I love Problem Solving & Especially project/app/website making. I like to interact with both the Backend & Frontend of the app To get the deepest understanding possible.</p>
-            <a href='https://github.com/safugit/safuvim-v2' className='mt-8 btn bg-red-700'>Github <FaGithub className='text-xl'></FaGithub></a>
+            <a href='https://github.com/safugit' className='mt-8 btn bg-red-700'>Github <FaGithub className='text-xl'></FaGithub></a>
           </div>
         </div>
       </div>
