@@ -30,7 +30,7 @@ const AboutMe = () => {
           <h1 className='text-6xl font-semibold'>About Me</h1>
           <div className='bg-green-950 rounded-2xl lg:w-[50%] w-full mt-4 bg p-4'>
             <p className='font-medium text-green-100'>
-              I am a self-motivated individual who began coding during the pandemic in 2020, Initially, it was just a hobby but later on it became a love for problem-solving. Throughout the years, I have worked on many projects. {media ? 'I’m always ready to learn more, work with other people, and tackle new obstacles that help me improve as a developer. At the moment, I am looking for places where I can use the knowledge I have, learn more about the industry, and to create useful products.' : ''}
+              I am a self-motivated individual who has been coding for 3+ Years, Initially, it was just a hobby but later on it became a love for problem-solving. Throughout the years, I have worked on many projects. {media ? 'I’m always ready to learn more, work with other people, and tackle new obstacles that help me improve as a developer. At the moment, I am looking for places where I can use the knowledge I have, learn more about the industry, and to create useful products.' : ''}
             </p>
           </div>
           <h1 className='text-2xl font-semibold mt-8 max-[362px]:hidden'>Why i love Coding</h1>
