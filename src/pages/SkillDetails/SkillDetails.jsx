@@ -37,7 +37,7 @@ const SkillDetails = () => {
           <h1 className="text-white font-semibold text-3xl">Frameworks</h1>
           <div className="divider divider-vertical mt-0 mb-1"></div>
           <img
-            src={`https://skillicons.dev/icons?i=angular,django,fastapi,expressjs,flask,flutter,react,spring,tailwindcss,vite,bootstrap&theme=dark&perline=${getPerLine(
+            src={`https://skillicons.dev/icons?i=angular,django,fastapi,expressjs,flask,flutter,react,spring,tailwindcss,vite,bootstrap,nextjs&theme=dark&perline=${getPerLine(
               7
             )}`}
             alt=""
