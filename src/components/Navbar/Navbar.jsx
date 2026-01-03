@@ -1,22 +1,20 @@
-import Menu from "daisyui/components/menu";
 import React, { useEffect, useState } from "react";
 import { BiHome, BiLike } from "react-icons/bi";
 import { CgCode, CgProfile } from "react-icons/cg";
 import { GoProject } from "react-icons/go";
-import { MdMenu } from "react-icons/md";
+import { MdMenu, MdClose } from "react-icons/md";
 import { PiPhone } from "react-icons/pi";
 import { useLocation } from "react-router";
-import { useMediaQuery } from "usehooks-ts";
 
 const Navbar = () => {
   const [activeHash, setActiveHash] = useState(window.location.hash || "#home");
-  const media = useMediaQuery('(min-width: 768px)');
+  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const onHashChange = () => {
       setActiveHash(window.location.hash);
-    }
+    };
 
     const interval = setInterval(onHashChange, 100);
     return () => clearInterval(interval);
@@ -26,53 +24,97 @@ const Navbar = () => {
     if (location.pathname === "/skillDetails") {
       setActiveHash("#skills");
     }
-  }, [location])
+  }, [location]);
 
-  const handleButtonPress = () => {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('scale-y-0');
-    navbar.classList.toggle('scale-y-100');
-    // navbar.classList.toggle('hidden');
-  }
-
-  useEffect(() => {
-    if (media) {
-      const navbar = document.querySelector('.navbar');
-      navbar.classList.remove('scale-y-0');
-      navbar.classList.add('scale-y-100');
-    }
-  }, [media]);
+  const navItems = [
+    { hash: "#home", icon: BiHome, label: "Home" },
+    { hash: "#aboutMe", icon: CgProfile, label: "Profile" },
+    { hash: "#skills", icon: CgCode, label: "Skills" },
+    { hash: "#hobbies", icon: BiLike, label: "Hobbies" },
+    { hash: "#projects", icon: GoProject, label: "Projects" },
+    { hash: "#contact", icon: PiPhone, label: "Contact" },
+  ];
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-center justify-start ml-10 md:ml-0">
-      <button className="text-3xl btn btn-circle bg md:hidden flex items-center" onClick={handleButtonPress}><MdMenu></MdMenu></button>
-      <div className="md:flex md:flex-row grid min-[463px]:grid-cols-3 grid-cols-2 bg md:rounded-full rounded-xl justify-center gap-4 navbar w-fit p-2 text-white border border-y-gray-950 transform scale-y-0 transition-transform duration-500 ease-in-out absolute top-15 md:static">
-        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#home" ? " bg-green-950" : "")} id="homeDiv">
-          <BiHome className="text-xl"></BiHome>
-          <a href="/#home">Home</a>
+    <>
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-6 left-6 z-50 lg:hidden w-12 h-12 flex items-center justify-center bg-black/40 backdrop-blur-md border-2 border-yellow-400/70 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(250,204,21,0.4)]"
+        aria-label="Toggle Navigation"
+      >
+        {isOpen ? <MdClose className="text-2xl" /> : <MdMenu className="text-2xl" />}
+      </button>
+
+      {/* Side Navbar */}
+      <nav
+        className={`fixed left-0 top-0 h-screen z-40 flex flex-col items-center justify-center gap-6 bg-black/40 backdrop-blur-md border-r-2 border-yellow-400/70 shadow-[0_0_40px_rgba(250,204,21,0.4)] transition-all duration-500 ${
+          isOpen ? "translate-x-0 w-64" : "-translate-x-full lg:translate-x-0 lg:w-20"
+        }`}
+      >
+        {/* Navigation Items */}
+        <div className="flex flex-col gap-4 w-full px-4">
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive =
+              activeHash === item.hash ||
+              (item.hash === "#skills" && location.pathname === "/skillDetails");
+
+            return (
+              <a
+                key={item.hash}
+                href={`/${item.hash}`}
+                onClick={() => setIsOpen(false)}
+                className={`group relative flex items-center gap-4 p-3 transition-all duration-300 ${
+                  isActive
+                    ? "bg-yellow-400 text-black shadow-[0_0_20px_rgba(250,204,21,0.6)]"
+                    : "text-yellow-400 hover:bg-yellow-400/10"
+                }`}
+              >
+                {/* Icon */}
+                <div
+                  className={`w-10 h-10 flex items-center justify-center transition-all ${
+                    isActive ? "scale-110" : "group-hover:scale-110"
+                  }`}
+                >
+                  <Icon className="text-2xl" />
+                </div>
+
+                {/* Label */}
+                <span
+                  className={`font-medium tracking-wide whitespace-nowrap transition-all duration-300 ${
+                    isOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4 lg:opacity-0"
+                  }`}
+                >
+                  {item.label}
+                </span>
+
+                {/* Tooltip for collapsed state on desktop */}
+                <span className="absolute left-full ml-4 px-3 py-2 bg-yellow-400 text-black text-sm font-medium whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300 shadow-[0_0_15px_rgba(250,204,21,0.4)] hidden lg:block">
+                  {item.label}
+                </span>
+
+                {/* Active Indicator */}
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-black"></div>
+                )}
+              </a>
+            );
+          })}
         </div>
-        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#aboutMe" ? " bg-green-950" : "")}>
-          <CgProfile className="text-xl"></CgProfile>
-          <a href="/#aboutMe">About Me</a>
-        </div>
-        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#skills" ? " bg-green-950" : location.pathname == "/skillDetails" ? " bg-green-950" : "")}>
-          <CgCode className="text-2xl"></CgCode>
-          <a href="/#skills">Skills</a>
-        </div>
-        <div className={"rounded-full p-2! flex gap-1 hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#hobbies" ? " bg-green-950" : "")}>
-          <BiLike className="text-xl"></BiLike>
-          <a href="/#hobbies">Hobbies</a>
-        </div>
-        <div className={"rounded-full p-2! flex gap-1 items-center hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#projects" ? " bg-green-950" : "")}>
-          <GoProject className="text-xl"></GoProject>
-          <a href="/#projects">Projects</a>
-        </div>
-        <div className={"rounded-full p-2! flex gap-1 items-center hover:bg-green-950 transition-colors duration-300 ease-in-out hover:cursor-pointer" + (activeHash == "#contact" ? " bg-green-950" : "")}>
-          <PiPhone className="text-xl"></PiPhone>
-          <a href="/#contact">Contact</a>
-        </div>
-      </div>
-    </div>
+
+        {/* Decorative Element */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-12 h-[1px] bg-gradient-to-r from-transparent via-yellow-400 to-transparent"></div>
+      </nav>
+
+      {/* Overlay for mobile */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
+    </>
   );
 };
 

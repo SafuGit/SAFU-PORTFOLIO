@@ -13,39 +13,42 @@ import Footer from './components/Footer/Footer'
 function App() {
 
   return (
-    <div className='App font-poppins'>
-      <Fade duration={2000} triggerOnce className='pt-3! mb-10! sticky z-50 top-0'>
-        <div>
-          <Navbar></Navbar>
-        </div>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
-        <Home></Home>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
-        <div className='mt-15 flex justify-center items-center'>
-          <a href='#aboutMe' className='btn bg-green-950 animate-bounce btn-circle'><BiDownArrow></BiDownArrow></a>
-        </div>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
-        <AboutMe></AboutMe>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
-        <Skills></Skills>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
-        <Hobbies></Hobbies>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
-        <Projects></Projects>
-      </Fade>
-      <Fade duration={2000} triggerOnce>
+    <div className='App font-poppins overflow-x-hidden'>
+      {/* Side Navbar */}
+      <Navbar />
+      
+      {/* Main Content with left padding for navbar */}
+      <div className='lg:pl-20'>
+        <Fade duration={2000} triggerOnce>
+          <Home></Home>
+        </Fade>
+        <Fade duration={2000} triggerOnce>
+          <div className='mt-15 flex justify-center items-center'>
+            <a href='#aboutMe' className='w-12 h-12 flex items-center justify-center bg-yellow-400/20 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black animate-bounce transition-all shadow-[0_0_20px_rgba(250,204,21,0.4)]'>
+              <BiDownArrow />
+            </a>
+          </div>
+        </Fade>
+        <Fade duration={2000} triggerOnce>
+          <AboutMe></AboutMe>
+        </Fade>
+        <Fade duration={2000} triggerOnce>
+          <Skills></Skills>
+        </Fade>
+        <Fade duration={2000} triggerOnce>
+          <Hobbies></Hobbies>
+        </Fade>
+        <Fade duration={2000} triggerOnce>
+          <Projects></Projects>
+        </Fade>
+        <Fade duration={2000} triggerOnce>
+          <div className='pb-10'>
+            <Contact></Contact>
+          </div>
+        </Fade>
         <div className='pb-10'>
-          <Contact></Contact>
+          <Footer></Footer>
         </div>
-      </Fade>
-      <div className='pb-10'>
-        <Footer></Footer>
       </div>
     </div>
   )
