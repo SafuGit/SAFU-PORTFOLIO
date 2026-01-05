@@ -131,3 +131,23 @@ html {
   -webkit-backdrop-filter: blur(3.8px);
   border: 1px solid rgba(34, 139, 34, 0.78);
 }
+
+/* Hide default scrollbar completely */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: none;
+}

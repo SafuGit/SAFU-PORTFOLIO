@@ -9,11 +9,15 @@ import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import { Fade } from 'react-awesome-reveal'
 import Footer from './components/Footer/Footer'
+import ScrollProgress from './components/ScrollProgress/ScrollProgress'
 
 function App() {
 
   return (
     <div className='App font-poppins overflow-x-hidden'>
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
+      
       {/* Side Navbar */}
       <Navbar />
       
